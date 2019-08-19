@@ -1,0 +1,78 @@
+{
+  "name": "base-react-electron-app",
+  "version": "0.0.0",
+  "main": "public/electron.js",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "electron-is-dev": "^1.1.0",
+    "electron-pdf-window": "https://github.com/leiteszeke/electron-pdf-window",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.1.1"
+  },
+  "author": {
+    "name": "Ezequiel Leites",
+    "email": "ezequiel@leites.dev",
+    "url": "https://leites.dev"
+  },
+  "build": {
+    "appId": "com.leiteszeke.basereactelectronapp",
+    "productName": "Base React Electron App",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "scripts": {
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build -lmw",
+    "electron:linux": "build -l",
+    "electron:mac": "build -m",
+    "electron:win": "build -w",
+    "eject": "rescripts eject",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.11",
+    "@rescripts/rescript-env": "^0.0.10",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "electron": "^6.0.2",
+    "electron-builder": "^21.2.0",
+    "typescript": "^3.5.3",
+    "wait-on": "^3.3.0"
+  },
+  "rescripts": [
+    "env"
+  ]
+}
