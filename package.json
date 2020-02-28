@@ -4,14 +4,14 @@
   "main": "public/electron.js",
   "private": true,
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
+    "@babel/runtime": "^7.8.4",
     "electron-is-dev": "^1.1.0",
-    "electron-pdf-window": "https://github.com/leiteszeke/electron-pdf-window",
-    "node-sass": "^4.12.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "electron-pdf-window": "^1.0.12",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.1.1"
+    "react-scripts": "^3.4.0"
   },
   "author": {
     "name": "Ezequiel Leites",
@@ -67,9 +67,9 @@
     "@rescripts/rescript-env": "^0.0.10",
     "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
-    "electron": "^6.0.2",
+    "electron": "^8.0.2",
     "electron-builder": "^21.2.0",
-    "typescript": "^3.5.3",
+    "typescript": "^3.8.2",
     "wait-on": "^3.3.0"
   },
   "rescripts": [
