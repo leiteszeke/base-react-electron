@@ -44,7 +44,7 @@
     "electron:mac": "build -m",
     "electron:win": "build -w",
     "eject": "rescripts eject",
-    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
+    "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,6 +65,7 @@
   "devDependencies": {
     "@rescripts/cli": "^0.0.11",
     "@rescripts/rescript-env": "^0.0.10",
+    "@types/react-dom": "^16.9.5",
     "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
     "electron": "^8.0.2",
