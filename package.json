@@ -4,14 +4,14 @@
   "main": "public/electron.js",
   "private": true,
   "dependencies": {
-    "@babel/runtime": "^7.8.4",
-    "electron-is-dev": "^1.1.0",
+    "@babel/runtime": "^7.12.5",
+    "electron-is-dev": "^1.2.0",
     "electron-pdf-window": "^1.0.12",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.4.0"
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.1"
   },
   "author": {
     "name": "Ezequiel Leites",
@@ -23,7 +23,8 @@
     "productName": "Base React Electron App",
     "copyright": "Copyright © 2019 ${author}",
     "mac": {
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "icon": "assets/icons/icon.png"
     },
     "files": [
       "build/**/*",
@@ -39,10 +40,10 @@
     "test": "rescripts test",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build",
-    "electron-pack": "build -lmw",
-    "electron:linux": "build -l",
-    "electron:mac": "build -m",
-    "electron:win": "build -w",
+    "electron-pack": "electron-builder -lmw",
+    "electron:linux": "electron-builder -l",
+    "electron:mac": "electron-builder -m",
+    "electron:win": "electron-builder -w",
     "eject": "rescripts eject",
     "dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\""
   },
@@ -63,15 +64,15 @@
   },
   "homepage": "./",
   "devDependencies": {
-    "@rescripts/cli": "^0.0.11",
-    "@rescripts/rescript-env": "^0.0.10",
-    "@types/react-dom": "^16.9.5",
-    "concurrently": "^4.1.2",
-    "cross-env": "^5.2.0",
-    "electron": "^8.0.2",
-    "electron-builder": "^21.2.0",
-    "typescript": "^3.8.2",
-    "wait-on": "^3.3.0"
+    "@rescripts/cli": "^0.0.15",
+    "@rescripts/rescript-env": "^0.0.12",
+    "@types/react-dom": "^17.0.0",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1",
+    "typescript": "^4.1.3",
+    "wait-on": "^5.2.1"
   },
   "rescripts": [
     "env"
